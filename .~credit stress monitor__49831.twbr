@@ -1,0 +1,1347 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='ff124eab96e07c0dfcfca120ec3446e34498e1826fdecc0cef178baaf95f6a78' _.fcp.WorkbookFingerprinting.true...creator-author-id='ff124eab96e07c0dfcfca120ec3446e34498e1826fdecc0cef178baaf95f6a78' _.fcp.WorkbookFingerprinting.true...creator-license-type='free' _.fcp.WorkbookFingerprinting.true...creator-machine-id='c0c04422b3eab1c58363e6f696c521475f9fcf254660271f8164a806d52ea1c5' _.fcp.WorkbookFingerprinting.true...license-type='free' _.fcp.WorkbookFingerprinting.true...machine-id='c0c04422b3eab1c58363e6f696c521475f9fcf254660271f8164a806d52ea1c5' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='monthly_trends' inline='true' name='federated.16eh1hs13a46r51bbveip05zuza2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='monthly_trends' name='textscan.0vpxrr81z0jcm511syn200mykydt'>
+            <connection class='textscan' directory='Data/tableau_data' filename='monthly_trends.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0vpxrr81z0jcm511syn200mykydt' name='monthly_trends.csv' table='[monthly_trends#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='State' ordinal='0' />
+            <column datatype='date' name='month' ordinal='1' />
+            <column datatype='integer' name='complaints' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[monthly_trends.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[monthly_trends.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[monthly_trends.csv_830C96A0C1F043B6B440840310C066AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[monthly_trends.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_trends.csv_830C96A0C1F043B6B440840310C066AA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>complaints</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[complaints]</local-name>
+            <parent-name>[monthly_trends.csv]</parent-name>
+            <remote-alias>complaints</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_trends.csv_830C96A0C1F043B6B440840310C066AA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='monthly_trends.csv' datatype='table' name='[__tableau_internal_object_id__].[monthly_trends.csv_830C96A0C1F043B6B440840310C066AA]' role='measure' type='quantitative' />
+      <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+      <column-instance column='[complaints]' derivation='Sum' name='[sum:complaints:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.16eh1hs13a46r51bbveip05zuza2].[sum:complaints:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.16eh1hs13a46r51bbveip05zuza2]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1x4zu2i0ksno8f1djw6251gpn35k].[avg:delinquency_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1x4zu2i0ksno8f1djw6251gpn35k].[med:delinquency_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1125dkt1l8q9sg12ldyhf0d344yx].[sum:complaints:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1x4zu2i0ksno8f1djw6251gpn35k].[sum:delinquency_rate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.1x4zu2i0ksno8f1djw6251gpn35k'>
+        <column-instance column='[delinquency_rate]' derivation='Avg' name='[avg:delinquency_rate:qk]' pivot='key' type='quantitative' />
+        <column caption='Delinquency Rate' datatype='real' name='[delinquency_rate]' role='measure' type='quantitative' />
+        <column-instance column='[delinquency_rate]' derivation='Median' name='[med:delinquency_rate:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[delinquency_rate]' derivation='Sum' name='[sum:delinquency_rate:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='monthly_trends.csv' id='monthly_trends.csv_830C96A0C1F043B6B440840310C066AA'>
+            <properties context=''>
+              <relation connection='textscan.0vpxrr81z0jcm511syn200mykydt' name='monthly_trends.csv' table='[monthly_trends#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='State' ordinal='0' />
+                  <column datatype='date' name='month' ordinal='1' />
+                  <column datatype='integer' name='complaints' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='quarterly_delinquency' inline='true' name='federated.1x4zu2i0ksno8f1djw6251gpn35k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='quarterly_delinquency' name='textscan.1ukqz7303bd8aq10tnczz04pcqi0'>
+            <connection class='textscan' directory='Data/tableau_data' filename='quarterly_delinquency.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ukqz7303bd8aq10tnczz04pcqi0' name='quarterly_delinquency.csv' table='[quarterly_delinquency#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='quarter' ordinal='0' />
+            <column datatype='integer' name='complaints' ordinal='1' />
+            <column datatype='real' name='delinquency_rate' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[quarterly_delinquency.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[quarterly_delinquency.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[quarterly_delinquency.csv_4C782C16BD9446EBAF3618743C46CF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>complaints</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[complaints]</local-name>
+            <parent-name>[quarterly_delinquency.csv]</parent-name>
+            <remote-alias>complaints</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[quarterly_delinquency.csv_4C782C16BD9446EBAF3618743C46CF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delinquency_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[delinquency_rate]</local-name>
+            <parent-name>[quarterly_delinquency.csv]</parent-name>
+            <remote-alias>delinquency_rate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[quarterly_delinquency.csv_4C782C16BD9446EBAF3618743C46CF1A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='quarterly_delinquency.csv' datatype='table' name='[__tableau_internal_object_id__].[quarterly_delinquency.csv_4C782C16BD9446EBAF3618743C46CF1A]' role='measure' type='quantitative' />
+      <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+      <column caption='Delinquency Rate' datatype='real' name='[delinquency_rate]' role='measure' type='quantitative' />
+      <column caption='Quarter' datatype='date' name='[quarter]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='quarterly_delinquency.csv' id='quarterly_delinquency.csv_4C782C16BD9446EBAF3618743C46CF1A'>
+            <properties context=''>
+              <relation connection='textscan.1ukqz7303bd8aq10tnczz04pcqi0' name='quarterly_delinquency.csv' table='[quarterly_delinquency#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='quarter' ordinal='0' />
+                  <column datatype='integer' name='complaints' ordinal='1' />
+                  <column datatype='real' name='delinquency_rate' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='combined_trend' inline='true' name='federated.0bllxbc0wmgs4b1dxi1hs0nmp72i' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_trend' name='textscan.0t6fqps1508gig12rhb2p1q82wfd'>
+            <connection class='textscan' directory='Data/tableau_data' filename='combined_trend.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0t6fqps1508gig12rhb2p1q82wfd' name='combined_trend.csv' table='[combined_trend#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='period' ordinal='0' />
+            <column datatype='integer' name='complaints' ordinal='1' />
+            <column datatype='real' name='delinquency_rate' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_trend.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[combined_trend.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_trend.csv_1C3E220CAF604118A0DBB4846AA92A7C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>complaints</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[complaints]</local-name>
+            <parent-name>[combined_trend.csv]</parent-name>
+            <remote-alias>complaints</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_trend.csv_1C3E220CAF604118A0DBB4846AA92A7C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delinquency_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[delinquency_rate]</local-name>
+            <parent-name>[combined_trend.csv]</parent-name>
+            <remote-alias>delinquency_rate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_trend.csv_1C3E220CAF604118A0DBB4846AA92A7C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='combined_trend.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_trend.csv_1C3E220CAF604118A0DBB4846AA92A7C]' role='measure' type='quantitative' />
+      <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+      <column caption='Delinquency Rate' datatype='real' name='[delinquency_rate]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='date' name='[period]' role='dimension' type='ordinal' />
+      <column-instance column='[delinquency_rate]' derivation='Avg' name='[avg:delinquency_rate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[complaints]' derivation='Sum' name='[sum:complaints:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[delinquency_rate]' derivation='Sum' name='[sum:delinquency_rate:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#29b5e7'>
+              <bucket>&quot;[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[avg:delinquency_rate:qk]&quot;</bucket>
+            </map>
+            <map to='#e84560'>
+              <bucket>&quot;[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[sum:complaints:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[sum:delinquency_rate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='combined_trend.csv' id='combined_trend.csv_1C3E220CAF604118A0DBB4846AA92A7C'>
+            <properties context=''>
+              <relation connection='textscan.0t6fqps1508gig12rhb2p1q82wfd' name='combined_trend.csv' table='[combined_trend#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='period' ordinal='0' />
+                  <column datatype='integer' name='complaints' ordinal='1' />
+                  <column datatype='real' name='delinquency_rate' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='product_analysis' inline='true' name='federated.0sh5h1e1avlhz410luo5s126e88o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='product_analysis' name='textscan.1mmpfr20pm4s1919m49n91gacjh2'>
+            <connection class='textscan' directory='Data/tableau_data' filename='product_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mmpfr20pm4s1919m49n91gacjh2' name='product_analysis.csv' table='[product_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Product' ordinal='0' />
+            <column datatype='string' name='State' ordinal='1' />
+            <column datatype='integer' name='complaints' ordinal='2' />
+            <column datatype='real' name='relief_rate' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[product_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product]</local-name>
+            <parent-name>[product_analysis.csv]</parent-name>
+            <remote-alias>Product</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[product_analysis.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>complaints</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[complaints]</local-name>
+            <parent-name>[product_analysis.csv]</parent-name>
+            <remote-alias>complaints</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>relief_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[relief_rate]</local-name>
+            <parent-name>[product_analysis.csv]</parent-name>
+            <remote-alias>relief_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='product_analysis.csv' datatype='table' name='[__tableau_internal_object_id__].[product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA]' role='measure' type='quantitative' />
+      <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+      <column caption='Relief Rate' datatype='real' name='[relief_rate]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='product_analysis.csv' id='product_analysis.csv_49FE7C0907BC401CAE9C27C3DF83EEDA'>
+            <properties context=''>
+              <relation connection='textscan.1mmpfr20pm4s1919m49n91gacjh2' name='product_analysis.csv' table='[product_analysis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Product' ordinal='0' />
+                  <column datatype='string' name='State' ordinal='1' />
+                  <column datatype='integer' name='complaints' ordinal='2' />
+                  <column datatype='real' name='relief_rate' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='state_risk_summary' inline='true' name='federated.044wrge0kzrclv1ax625s04gnkvn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='state_risk_summary' name='textscan.1hwrf2e0crgbw416hqize1dloxt3'>
+            <connection class='textscan' directory='Data/tableau_data' filename='state_risk_summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1hwrf2e0crgbw416hqize1dloxt3' name='state_risk_summary.csv' table='[state_risk_summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='State' ordinal='0' />
+            <column datatype='integer' name='total_complaints' ordinal='1' />
+            <column datatype='real' name='pct_of_total' ordinal='2' />
+            <column datatype='real' name='z_score' ordinal='3' />
+            <column datatype='string' name='risk_level' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_complaints</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_complaints]</local-name>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias>total_complaints</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_of_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_of_total]</local-name>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias>pct_of_total</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>z_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[z_score]</local-name>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias>z_score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>risk_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[risk_level]</local-name>
+            <parent-name>[state_risk_summary.csv]</parent-name>
+            <remote-alias>risk_level</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='state_risk_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]' role='measure' type='quantitative' />
+      <column caption='Pct Of Total' datatype='real' name='[pct_of_total]' role='measure' type='quantitative' />
+      <column caption='Risk Level' datatype='string' name='[risk_level]' role='dimension' type='nominal' />
+      <column caption='Total Complaints' datatype='integer' name='[total_complaints]' role='measure' type='quantitative' />
+      <column caption='Z Score' datatype='real' name='[z_score]' role='measure' type='quantitative' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      <column-instance column='[risk_level]' derivation='None' name='[none:risk_level:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Exclusions (Risk Level,State)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:risk_level:nk]' />
+          <groupfilter function='level-members' level='[none:State:nk]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/sruthiravi/Desktop/customer_credit_health_scorecard/credit stress monitor.twb Files/federated.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='08/07/2026 03:05:04 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='state_risk_summary' increment-value='%null%' refresh-type='create' rows-inserted='51' timestamp-start='2026-08-07 15:05:04.370' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>0</ordinal>
+              <family>state_risk_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_complaints</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_complaints]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_complaints</remote-alias>
+              <ordinal>1</ordinal>
+              <family>state_risk_summary.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_of_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_of_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_of_total</remote-alias>
+              <ordinal>2</ordinal>
+              <family>state_risk_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>45</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>z_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[z_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>z_score</remote-alias>
+              <ordinal>3</ordinal>
+              <family>state_risk_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>risk_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[risk_level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>risk_level</remote-alias>
+              <ordinal>4</ordinal>
+              <family>state_risk_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:risk_level:nk]' type='palette'>
+            <map to='#66bb6a'>
+              <bucket>&quot;Low&quot;</bucket>
+            </map>
+            <map to='#dc3445'>
+              <bucket>&quot;Critical&quot;</bucket>
+            </map>
+            <map to='#ff8c00'>
+              <bucket>&quot;Elevated&quot;</bucket>
+            </map>
+            <map to='#ffc107'>
+              <bucket>&quot;Moderate&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='state_risk_summary.csv' id='state_risk_summary.csv_5F9D83C0BAFD4830B7F992D39CCF899E'>
+            <properties context=''>
+              <relation connection='textscan.1hwrf2e0crgbw416hqize1dloxt3' name='state_risk_summary.csv' table='[state_risk_summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='State' ordinal='0' />
+                  <column datatype='integer' name='total_complaints' ordinal='1' />
+                  <column datatype='real' name='pct_of_total' ordinal='2' />
+                  <column datatype='real' name='z_score' ordinal='3' />
+                  <column datatype='string' name='risk_level' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Credit Stress Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>US Consumer Credit Stress by State — 2023 to Present</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='state_risk_summary' name='federated.044wrge0kzrclv1ax625s04gnkvn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.044wrge0kzrclv1ax625s04gnkvn'>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[risk_level]' derivation='None' name='[none:risk_level:nk]' pivot='key' type='nominal' />
+            <column caption='Risk Level' datatype='string' name='[risk_level]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.044wrge0kzrclv1ax625s04gnkvn].[Exclusions (Risk Level,State)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:risk_level:nk]' />
+                <groupfilter function='level-members' level='[none:State:nk]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;AK&quot;' />
+                  <groupfilter function='member' level='[none:risk_level:nk]' member='&quot;Low&quot;' />
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:risk_level:nk]' />
+                  <hierarchy name='[none:State:nk]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.044wrge0kzrclv1ax625s04gnkvn].[Exclusions (Risk Level,State)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.044wrge0kzrclv1ax625s04gnkvn].[Longitude (generated)]' field-type='quantitative' max='32599249.111608569' min='26152854.658029154' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.044wrge0kzrclv1ax625s04gnkvn].[Latitude (generated)]' field-type='quantitative' max='7081424.9258314064' min='2086350.0447393903' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='light' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:risk_level:nk]' />
+              <lod column='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:State:nk]' />
+              <geometry column='[federated.044wrge0kzrclv1ax625s04gnkvn].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.044wrge0kzrclv1ax625s04gnkvn].[Latitude (generated)]</rows>
+        <cols>[federated.044wrge0kzrclv1ax625s04gnkvn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{06CC1D00-833C-4DDE-9165-C41B6B9A0CF9}' />
+    </worksheet>
+    <worksheet name='National Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>National Complaint Volume vs Credit Card Delinquency Rate (2015–2026)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_trend' name='federated.0bllxbc0wmgs4b1dxi1hs0nmp72i' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bllxbc0wmgs4b1dxi1hs0nmp72i'>
+            <column-instance column='[delinquency_rate]' derivation='Avg' name='[avg:delinquency_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+            <column caption='Delinquency Rate' datatype='real' name='[delinquency_rate]' role='measure' type='quantitative' />
+            <column caption='Period' datatype='date' name='[period]' role='dimension' type='ordinal' />
+            <column-instance column='[complaints]' derivation='Sum' name='[sum:complaints:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[period]' derivation='Year' name='[yr:period:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[avg:delinquency_rate:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[sum:complaints:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[avg:delinquency_rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[sum:complaints:qk] + [federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[avg:delinquency_rate:qk])</rows>
+        <cols>[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[yr:period:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book'>Jan 2025: CFPB regulatory event +231% YoY</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.533333'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[yr:period:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2025</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5397335.5189107414'>
+                  <node-reference>
+                    <axis>[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[sum:complaints:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-839' y='220' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{FACF12C5-EDCE-4F0D-BE68-A7A7F641FEC6}' />
+    </worksheet>
+    <worksheet name='Product Breakdown'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Complaint Volume by Product — Excluding Credit Reporting (78% of total)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='product_analysis' name='federated.0sh5h1e1avlhz410luo5s126e88o' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sh5h1e1avlhz410luo5s126e88o'>
+            <column datatype='string' name='[Product]' role='dimension' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[relief_rate]' derivation='Avg' name='[avg:relief_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Complaints' datatype='integer' name='[complaints]' role='measure' type='quantitative' />
+            <column-instance column='[Product]' derivation='None' name='[none:Product:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column caption='Relief Rate' datatype='real' name='[relief_rate]' role='measure' type='quantitative' />
+            <column-instance column='[complaints]' derivation='Sum' name='[sum:complaints:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sh5h1e1avlhz410luo5s126e88o].[none:Product:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Product:nk]' />
+              <groupfilter function='member' level='[none:Product:nk]' member='&quot;Credit Reporting&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0sh5h1e1avlhz410luo5s126e88o].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;AK&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;AL&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;AR&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;AZ&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;CA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;CO&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;CT&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;DC&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;DE&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;FL&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;GA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;HI&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;IA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;ID&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;IL&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;IN&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;KS&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;KY&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;LA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MD&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;ME&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MI&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MN&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MO&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MS&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;MT&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NC&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;ND&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NE&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NH&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NJ&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NM&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NV&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;NY&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;OH&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;OK&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;OR&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;PA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;RI&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;SC&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;SD&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;TN&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;TX&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;UT&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;VA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;VT&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;WA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;WI&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;WV&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;WY&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0sh5h1e1avlhz410luo5s126e88o].[none:Product:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0sh5h1e1avlhz410luo5s126e88o].[sum:complaints:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0sh5h1e1avlhz410luo5s126e88o].[none:State:nk]</column>
+            <column>[federated.0sh5h1e1avlhz410luo5s126e88o].[none:Product:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0sh5h1e1avlhz410luo5s126e88o].[avg:relief_rate:qk]' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sh5h1e1avlhz410luo5s126e88o].[avg:relief_rate:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0sh5h1e1avlhz410luo5s126e88o].[none:Product:nk]</rows>
+        <cols>[federated.0sh5h1e1avlhz410luo5s126e88o].[sum:complaints:qk]</cols>
+      </table>
+      <simple-id uuid='{7CC44959-DE43-49FF-9D12-5B5A304D8E30}' />
+    </worksheet>
+    <worksheet name='State Z-Scores'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='state_risk_summary' name='federated.044wrge0kzrclv1ax625s04gnkvn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.044wrge0kzrclv1ax625s04gnkvn'>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[z_score]' derivation='Sum' name='[sum:z_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Z Score' datatype='real' name='[z_score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;CA&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;FL&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;TX&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.044wrge0kzrclv1ax625s04gnkvn].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.044wrge0kzrclv1ax625s04gnkvn].[sum:z_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.044wrge0kzrclv1ax625s04gnkvn].[none:State:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{87A5F6E5-F3A2-42E8-B95B-85789865D84F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Credit Stress Monitor'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>US Consumer Credit Stress Monitor — CFPB Analysis 2015–2026</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='15' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='5078' id='16' type-v2='title' w='98828' x='586' y='1042'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92838' id='7' param='horz' type-v2='layout-flow' w='98828' x='586' y='6120'>
+              <zone h='92838' id='5' type-v2='layout-basic' w='87115' x='586' y='6120'>
+                <zone h='46418' id='3' name='Credit Stress Map' w='43558' x='586' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='46420' id='9' name='National Trend' w='87115' x='586' y='52538'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='46418' id='17' name='Product Breakdown' w='43557' x='44144' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='160' h='92838' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='6120'>
+                <zone h='13802' id='8' name='Credit Stress Map' pane-specification-id='0' param='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:risk_level:nk]' type-v2='color' w='11713' x='87701' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>US Consumer Credit Stress Monitor — CFPB Analysis 2015–2026</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='20' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone h='5078' id='16' type-v2='title' w='98828' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46418' id='3' is-fixed='true' name='Credit Stress Map' w='43558' x='586' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13802' id='8' name='Credit Stress Map' pane-specification-id='0' param='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:risk_level:nk]' type-v2='color' w='11713' x='87701' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46418' id='17' is-fixed='true' name='Product Breakdown' w='43557' x='44144' y='6120'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46420' id='9' is-fixed='true' name='National Trend' w='87115' x='586' y='52538'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BACBDFC0-AA40-4131-8CE4-36DABE5573A4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='114'>
+    <window class='worksheet' name='Credit Stress Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.044wrge0kzrclv1ax625s04gnkvn].[none:risk_level:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{7D7D6F4B-8274-46A4-9F4D-817ED1D3F889}' />
+    </window>
+    <window class='worksheet' name='National Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0bllxbc0wmgs4b1dxi1hs0nmp72i].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2892A17F-E60A-491D-A722-B99AF85E9963}' />
+    </window>
+    <window class='worksheet' name='Product Breakdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0sh5h1e1avlhz410luo5s126e88o].[none:State:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0sh5h1e1avlhz410luo5s126e88o].[avg:relief_rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C31BA7AB-3D11-47E1-B7E3-8D9B5CF9AEE3}' />
+    </window>
+    <window class='worksheet' name='State Z-Scores'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DE29D671-2052-49A4-94E7-A4C4E1CF1488}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Credit Stress Monitor'>
+      <viewpoints>
+        <viewpoint name='Credit Stress Map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='National Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Product Breakdown' />
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{28816244-CC7D-49A8-BFBD-658DF2FFE01D}' />
+    </window>
+  </windows>
+</workbook>
