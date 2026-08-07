@@ -23,4 +23,10 @@ SQL analytics on 16.9M CFPB consumer complaints to identify consumer credit stre
 - 2026 data is partial — July 2026 complaint counts will increase as more complaints are processed
 
 ## Dashboard
-*Tableau dashboard available for live demo — contains US Credit Stress Map, National Trend vs Delinquency Rate, and Product Breakdown with monetary relief rate analysis*
+Dashboard built in Tableau Desktop — available for live demo upon request. 
+Screenshots below.
+<img width="925" height="752" alt="Screenshot 2026-08-07 at 12 00 16 PM" src="https://github.com/user-attachments/assets/f2594c4f-843d-4a34-a148-2d05f753779b" />
+<img width="923" height="377" alt="Screenshot 2026-08-07 at 12 00 57 PM" src="https://github.com/user-attachments/assets/516237a3-127b-4b22-883d-6cd309d65910" />
+<img width="925" height="756" alt="Screenshot 2026-08-07 at 12 00 36 PM" src="https://github.com/user-attachments/assets/7325b1ee-66ed-44ae-b2e2-8da54d642de1" />
+
+[View Key Findings Report](Consumer%20Credit%20Health%20Scorecard%20%E2%80%94%20Key%20Findings.pdf)
